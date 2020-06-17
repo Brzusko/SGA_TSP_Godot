@@ -1,0 +1,47 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "City",
+"language": "GDScript",
+"path": "res://Scenes/City.gd"
+}, {
+"base": "Node",
+"class": "CitySpawner",
+"language": "GDScript",
+"path": "res://Scenes/CitySpawner.gd"
+}, {
+"base": "Node",
+"class": "Member",
+"language": "GDScript",
+"path": "res://Scenes/Member.gd"
+} ]
+_global_script_class_icons={
+"City": "",
+"CitySpawner": "",
+"Member": ""
+}
+
+[application]
+
+config/name="TSP"
+run/main_scene="res://SimulationScene.tscn"
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
+config/icon="res://icon.png"
+
+[autoload]
+
+CityLoader="*res://Singletons/CityLoader.gd"
+
+[rendering]
+
+environment/default_clear_color=Color( 0, 0, 0, 1 )
+environment/default_environment="res://default_env.tres"
